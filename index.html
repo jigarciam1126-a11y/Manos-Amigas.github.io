@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Manos Amigas - Entrega de medicamentos y supermercado</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <img src="/mnt/data/b94a4aa8-d009-4a54-90ed-c16d57db9c01.jpg" alt="Logo Manos Amigas" class="logo">
+      <h1>Manos Amigas</h1>
+      <p class="subtitle">Entregamos tus medicamentos y compras del supermercado hasta la puerta de tu hogar en todo El Salvador.</p>
+      <a href="#order" class="btn primary">Hacer Pedido Ahora</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about" class="card">
+      <h2>¿Quiénes somos?</h2>
+      <p>En <strong>Manos Amigas</strong> nos comprometemos con su bienestar. Facilitamos su día a día con un servicio de entrega rápido, seguro y confiable. Entregamos medicamentos, productos de cuidado personal y compras de supermercado a domicilio en todo El Salvador.</p>
+    </section>
+
+    <section id="services" class="grid">
+      <div class="card service">
+        <h3>Farmacias</h3>
+        <p>Entrega de medicamentos, vitaminas y productos de salud.</p>
+        <button class="btn" onclick="openModal('https://www.farmaciasdelahorro.hn/#/')">Ver productos</button>
+      </div>
+      <div class="card service">
+        <h3>Supermercado</h3>
+        <p>Despacho de víveres, lácteos, abarrotes, vegetales y más.</p>
+        <button class="btn" onclick="openModal('https://www.lacolonia.com/')">Ver productos</button>
+      </div>
+    </section>
+
+    <section id="prices" class="card">
+      <h2>Precios (adaptados a El Salvador, USD)</h2>
+      <div class="price-grid">
+        <div class="price-card">
+          <h4>Entregas desde Farmacias</h4>
+          <ul>
+            <li>Zona urbana: <strong>$1.50</strong></li>
+            <li>Zonas aledañas: <strong>$2.00 – $3.00</strong></li>
+            <li>Urgente (30–45 min): <strong>$3.50 – $4.00</strong></li>
+          </ul>
+        </div>
+        <div class="price-card">
+          <h4>Entregas desde Supermercados</h4>
+          <ul>
+            <li>Compras menores a $10: <strong>$2.00</strong></li>
+            <li>Compras $10–$30: <strong>$2.50</strong></li>
+            <li>Compras mayores a $30: <strong>GRATIS</strong> (zona urbana)</li>
+            <li>Zonas fuera de la ciudad: <strong>$3.00 – $5.00</strong></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="order" class="card">
+      <h2>Formulario de pedido</h2>
+      <p>Rellena el formulario y presiona <strong>Enviar pedido ahora</strong>. El pedido se convertirá en un archivo descargable y se abrirá tu cliente de correo para enviar la solicitud al equipo de Manos Amigas.</p>
+      <form id="orderForm">
+        <label>Nombre completo<input type="text" name="name" required></label>
+        <label>Teléfono / WhatsApp<input type="tel" name="phone" required></label>
+        <label>Dirección de entrega<textarea name="address" required></textarea></label>
+        <label>Municipio / Departamento<input type="text" name="location" required></label>
+        <label>Tipo de pedido
+          <select name="type" required>
+            <option value="Farmacia">Farmacia</option>
+            <option value="Supermercado">Supermercado</option>
+          </select>
+        </label>
+        <label>Lista de productos (cantidad y descripción)<textarea name="items" required></textarea></label>
+        <label>Método de pago
+          <select name="payment" required>
+            <option>Contraentrega</option>
+            <option>Transferencia</option>
+            <option>Sinpe</option>
+            <option>Tarjeta</option>
+          </select>
+        </label>
+        <button type="submit" class="btn primary">Enviar pedido ahora</button>
+      </form>
+      <p class="note">Nota: Si prefieres, también puedes enviar el pedido manualmente por WhatsApp al número +503 0000-0000.</p>
+    </section>
+
+    <section id="testimonials" class="card">
+      <h2>Testimonios</h2>
+      <div class="test-grid">
+        <blockquote>“Excelente servicio, rápido y confiable. Me salvaron el día.” — Ana G.</blockquote>
+        <blockquote>“Muy profesionales y atentos.” — Carlos M.</blockquote>
+        <blockquote>“Llegaron a tiempo y mis medicinas venían bien protegidas.” — Rosa P.</blockquote>
+      </div>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contacto</h2>
+      <p>Teléfono / WhatsApp: <strong>+503 0000-0000</strong></p>
+      <p>Horario: 7:00 AM – 9:00 PM</p>
+      <p>Correo: <strong>pedidos@manosamigas.sv</strong></p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Manos Amigas – Tu bienestar es nuestra prioridad.</p>
+      <p><a href="README.txt" download>Instrucciones para publicar</a></p>
+    </div>
+  </footer>
+
+  <!-- Modal for embedding external product pages -->
+  <div id="modal" class="modal" onclick="closeModal(event)">
+    <div class="modal-content">
+      <button class="close" onclick="closeModal(event)">✕</button>
+      <iframe id="modalFrame" src="" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

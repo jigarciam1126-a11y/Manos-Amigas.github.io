@@ -1,0 +1,40 @@
+/* styles.css - simple responsive design */
+:root{
+  --bg:#f7f6f3; --card:#ffffff; --accent:#4aa3d8; --muted:#6b7280;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, Arial, sans-serif; margin:0; background:var(--bg); color:#111;}
+.container{max-width:980px;margin:0 auto;padding:20px;}
+.hero{background:linear-gradient(180deg, rgba(255,249,242,1), rgba(247,246,243,1)); padding:40px 0; text-align:center;}
+.logo{max-width:140px;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,0.08);display:block;margin:0 auto 10px;}
+h1{font-family:'Playfair Display', serif; font-size:40px; margin:8px 0;}
+.subtitle{color:var(--muted); margin-bottom:16px;}
+.btn{display:inline-block;padding:10px 16px;border-radius:8px;border:none;background:transparent;cursor:pointer;box-shadow:none;font-weight:600;}
+.btn.primary{background:var(--accent);color:#fff;}
+.card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(13,23,34,0.04);margin-bottom:20px;}
+.grid{display:flex;gap:16px;flex-wrap:wrap;}
+.service{flex:1;min-width:240px;}
+.price-grid{display:flex;gap:16px;flex-wrap:wrap;}
+.price-card{flex:1;min-width:260px;}
+.price-card ul{padding-left:18px;}
+.price-grid .price-card{background:linear-gradient(180deg,#fff,#fbfbff);padding:14px;border-radius:10px;}
+label{display:block;margin:10px 0;font-size:14px;}
+input[type="text"],input[type="tel"],select,textarea{width:100%;padding:8px;border-radius:8px;border:1px solid #e6e7eb;font-size:14px;}
+textarea{min-height:90px;resize:vertical;}
+.note{font-size:13px;color:var(--muted);}
+
+.test-grid{display:grid;grid-template-columns:1fr;gap:10px;}
+.test-grid blockquote{margin:0;padding:12px;border-left:4px solid var(--accent);background:#fbfeff;border-radius:6px;color:#333;}
+
+.footer{padding:20px 0;text-align:center;color:var(--muted);font-size:14px;}
+@media(min-width:800px){
+  .test-grid{grid-template-columns:repeat(3,1fr);}
+  .grid{flex-wrap:nowrap;}
+  .price-grid{flex-wrap:nowrap;}
+}
+
+/* Modal */
+.modal{position:fixed;inset:0;display:none;background:rgba(0,0,0,0.5);align-items:center;justify-content:center;padding:20px;}
+.modal-content{width:100%;max-width:1100px;background:#fff;border-radius:10px;position:relative;overflow:hidden;height:80vh;}
+.modal-content .close{position:absolute;z-index:3;right:10px;top:10px;border:none;background:#fff;padding:6px 10px;border-radius:6px;cursor:pointer;}
+.modal iframe{width:100%;height:100%;border:0;}
